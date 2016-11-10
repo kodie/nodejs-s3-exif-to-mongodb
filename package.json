@@ -1,0 +1,20 @@
+{
+  "name": "nodejs-s3-exif-to-mongodb",
+  "version": "1.0.0",
+  "author": {
+    "name": "Kodie Grantham",
+    "email": "kodie.grantham@gmail.com",
+    "url": "http://kodieg.com"
+  },
+  "description": "",
+  "main": "app.js",
+  "private": true,
+  "dependencies": {
+    "async": "^2.1.2",
+    "exif": "^0.6.0",
+    "mongodb": "^2.2.11",
+    "request": "^2.78.0",
+    "xml2js": "^0.4.17",
+    "yargs": "^6.3.0"
+  }
+}
