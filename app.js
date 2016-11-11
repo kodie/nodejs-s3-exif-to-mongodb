@@ -36,10 +36,12 @@ for (i = 0; i < requiredVars.length; i++) {
 function getImagesFromXML() {
   // Fetch the XML data
   console.log('Fetching XML...');
+
   request.get(settings.xmlURL, function(error, response, body) {
     if (!error && response.statusCode == 200) {
       // Parse the XML data
       console.log('Parsing XML...');
+
       parseXML(body, function(error, result) {
         if (!error) {
           // Store the parsed XML data into the images object
@@ -47,20 +49,24 @@ function getImagesFromXML() {
 
           // Make sure that we actually have the images
           if (images.length) {
+            // Found images
             console.log('Images found:', images.length);
 
             // Start the next step
             getEXIFdata();
           } else {
+            // Failed to find images
             console.log('No images found.');
             process.exit(1);
           }
         } else {
+          // Failed to parse XML data
           console.log('Error parsing XML data:', error.message);
           process.exit(1);
         }
       });
     } else {
+      // Failed to parse XML data
       console.log('Error fetching XML data:', error.message);
       process.exit(1);
     }
@@ -139,8 +145,9 @@ function getEXIFdata() {
 }
 
 function storeImageData() {
-  // Connect to the MongoDB server
   console.log('Connecting to database...');
+
+  // Connect to the MongoDB server
   mongodb.connect(settings.mongoURL, function(error, db) {
     if (!error) {
       // Set the collection
@@ -154,7 +161,7 @@ function storeImageData() {
           process.exit();
         } else {
           // Insert failed
-          console.log('Could not insert image data into database:', error);
+          console.log('Unable to insert image data into database:', error);
           process.exit(1);
         }
       });
