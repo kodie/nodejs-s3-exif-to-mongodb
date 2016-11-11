@@ -80,7 +80,7 @@ function getEXIFdata() {
   async.reduce(images, "", function(memo, item, callback) {
     var fileName = item.Key[0];
     var fileURL = settings.xmlURL + '/' + fileName;
-    var fileETag = item.ETag[0];
+    var fileETag = item.ETag[0].replace(/\"/g, '');
 
     // Download the image
     request.get({url:fileURL, encoding:null}, function(error, response, body) {
