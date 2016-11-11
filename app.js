@@ -158,10 +158,20 @@ function storeImageData() {
         if (!error) {
           // Insert successful
           console.log('Successfully inserted ' + result.result.n + ' images into the database!');
+
+          // Disconnect from database
+          db.close();
+
+          // Exit
           process.exit();
         } else {
           // Insert failed
           console.log('Unable to insert image data into database:', error);
+
+          // Disconnect from database
+          db.close();
+
+          // Exit with an error
           process.exit(1);
         }
       });
