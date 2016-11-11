@@ -81,6 +81,7 @@ function getEXIFdata() {
     var fileName = item.Key[0];
     var fileURL = settings.xmlURL + '/' + fileName;
     var fileETag = item.ETag[0].replace(/\"/g, '');
+    var fileSize = item.Size[0];
 
     // Download the image
     request.get({url:fileURL, encoding:null}, function(error, response, body) {
@@ -96,6 +97,7 @@ function getEXIFdata() {
                 name: fileName,
                 url: fileURL,
                 etag: fileETag,
+                size: fileSize,
                 data: exifData
               });
 

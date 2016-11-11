@@ -36,6 +36,7 @@ $ node app.js --xmlURL=http://s3.amazonaws.com/my-bucket --mongoURL=mongodb://lo
   name: "my-image1.jpg",
   url: "http://s3.amazonaws.com/my-bucket/my-image1.jpg",
   etag: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+  size: 1182657,
   data: {
     image: {},
     thumbnail: {},
