@@ -38,12 +38,86 @@ $ node app.js --xmlURL=http://s3.amazonaws.com/my-bucket --mongoURL=mongodb://lo
   etag: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
   size: 1182657,
   data: {
-    image: {},
-    thumbnail: {},
-    exif: {},
-    gps: {},
-    interoperability: {},
-    makernote: {}
+    image: {
+      Make: 'FUJIFILM',
+      Model: 'FinePix40i',
+      Orientation: 1,
+      XResolution: 72,
+      YResolution: 72,
+      ResolutionUnit: 2,
+      Software: 'Digital Camera FinePix40i Ver1.39',
+      ModifyDate: '2000:08:04 18:22:57',
+      YCbCrPositioning: 2,
+      Copyright: '          ',
+      ExifOffset: 250
+    },
+    thumbnail: {
+      Compression: 6,
+      Orientation: 1,
+      XResolution: 72,
+      YResolution: 72,
+      ResolutionUnit: 2,
+      ThumbnailOffset: 1074,
+      ThumbnailLength: 8691,
+      YCbCrPositioning: 2
+    },
+    exif: {
+      FNumber: 2.8,
+      ExposureProgram: 2,
+      ISO: 200,
+      ExifVersion: <binary>,
+      DateTimeOriginal: '2000:08:04 18:22:57',
+      CreateDate: '2000:08:04 18:22:57',
+      ComponentsConfiguration: <binary>,
+      CompressedBitsPerPixel: 1.5,
+      ShutterSpeedValue: 5.5,
+      ApertureValue: 3,
+      BrightnessValue: 0.26,
+      ExposureCompensation: 0,
+      MaxApertureValue: 3,
+      MeteringMode: 5,
+      Flash: 1,
+      FocalLength: 8.7,
+      MakerNote: <binary>,
+      FlashpixVersion: <binary>,
+      ColorSpace: 1,
+      ExifImageWidth: 2400,
+      ExifImageHeight: 1800,
+      InteropOffset: 926,
+      FocalPlaneXResolution: 2381,
+      FocalPlaneYResolution: 2381,
+      FocalPlaneResolutionUnit: 3,
+      SensingMethod: 2,
+      FileSource: <binary>,
+      SceneType: <binary>
+    },
+    gps: {
+      GPSVersionID: [
+        2,
+        2,
+        0,
+        0
+      ]
+    },
+    interoperability: {
+      InteropIndex: 'R98',
+      InteropVersion: <binary>
+    },
+    makernote: {
+      Version: <binary>,
+      Quality: 'NORMAL ',
+      Sharpness: 3,
+      WhiteBalance: 0,
+      FujiFlashMode: 1,
+      FlashExposureComp: 0,
+      Macro: 0,
+      FocusMode: 0,
+      SlowSync: 0,
+      AutoBracketing: 0,
+      BlurWarning: 0,
+      FocusWarning: 0,
+      ExposureWarning: 0
+    }
   }
 }
 ```
